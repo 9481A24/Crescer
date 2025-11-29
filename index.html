@@ -1,47 +1,409 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<title>História Realista para Jovens</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Plano Completo 11→18 anos — Crescimento, Estudos e Finanças</title>
 <style>
-    body { font-family: Arial; background:#f5f5f5; padding:20px; }
-    .card {
-        background:#fff; padding:20px; border-radius:10px;
-        box-shadow:0 0 10px rgba(0,0,0,0.1); margin-bottom:20px;
-    }
-    h1 { color:#333; }
-    h2 { color:#444; }
+  :root{
+    --bg:#f4f6f8; --card:#fff; --accent:#111;
+    --muted:#666; --success:#0a7; --danger:#e54;
+    font-family:Inter, "Segoe UI", Arial, sans-serif;
+  }
+  body{background:var(--bg); margin:0; padding:20px; line-height:1.45; color:#222;}
+  header{display:flex;gap:12px;align-items:center;margin-bottom:18px;}
+  header h1{margin:0;font-size:20px;}
+  .wrap{max-width:980px;margin:0 auto;}
+  .card{background:var(--card);padding:16px;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,0.06); margin-bottom:14px;}
+  h2{margin:0 0 10px 0;font-size:16px;}
+  p.small{color:var(--muted);margin:0 0 8px 0;font-size:14px;}
+  .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;}
+  .year-list{display:flex;flex-direction:column;gap:8px;}
+  .year{border-left:4px solid #ddd;padding:10px;border-radius:6px;background:#fbfcfd;}
+  label{display:block;font-size:13px;margin:6px 0;color:var(--muted);}
+  input[type="text"], input[type="number"], textarea, select{
+    width:100%;padding:8px;border-radius:6px;border:1px solid #d6d9dd;background:#fff;
+  }
+  button{background:var(--accent);color:#fff;padding:8px 12px;border:none;border-radius:8px;cursor:pointer;}
+  .muted{color:var(--muted);font-size:13px;}
+  ul{margin:8px 0 0 18px;padding:0}
+  .flex{display:flex;gap:8px;align-items:center;}
+  .habits{display:flex;flex-wrap:wrap;gap:8px;}
+  .habit{padding:8px 10px;border-radius:8px;background:#f0f4f6;border:1px solid #e6eaee;font-size:14px;cursor:pointer;}
+  .habit.active{background:var(--success);color:#fff;border-color:transparent;}
+  .goal-item{display:flex;justify-content:space-between;align-items:center;padding:8px;border-radius:8px;background:#fff;border:1px solid #efefef;}
+  .small-btn{padding:6px 8px;border-radius:8px;border:none;background:#eee;cursor:pointer;}
+  .progress-bar{height:14px;background:#eee;border-radius:8px;overflow:hidden;}
+  .progress-bar > i{display:block;height:100%;background:linear-gradient(90deg,#0a7,#3ad);width:0%;}
+  footer{font-size:13px;color:var(--muted);text-align:center;margin-top:10px;}
+  @media(max-width:720px){.grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
+<div class="wrap">
+  <header>
+    <img src="" alt="" style="width:56px;height:56px;background:#ffd54f;border-radius:10px;display:block">
+    <div>
+      <h1>Plano de Crescimento 11 → 18 anos</h1>
+      <div class="muted">Guia prático: estudo, hábitos, finanças e metas — com ferramentas para acompanhar</div>
+    </div>
+  </header>
 
-<h1>História: Dois Caminhos, Dois Futuros</h1>
+  <!-- OVERVIEW -->
+  <section class="card" id="overview">
+    <h2>Visão Geral (objetivo)</h2>
+    <p class="small">Este plano transforma 7 anos (11→18) em passos práticos. Objetivos: concluir Ensino Médio com notas consistentes, desenvolver habilidades técnicas, aprender finanças básicas, e preparar-se para trabalho ou faculdade.</p>
+    <ul>
+      <li><b>Meta principal:</b> Aos 18 ter pelo menos 1 habilidade técnica + 1 certificação/curso + economia guardada (meta: 20% da renda/ajuda recebida).</li>
+      <li><b>Como usar:</b> Preencha metas, marque hábitos diariamente, use o cronograma semanal e acompanhe progresso.</li>
+    </ul>
+  </section>
 
-<div class="card">
-<h2>W. Walker — O Menino que Escolheu o Futuro</h2>
-<p>W. Walker era inteligente e curioso. Ele entendeu cedo que namoro aos 11 anos traz só brigas, ciúmes e distração.</p>
-<p>Ele focou em estudar, aprender sobre dinheiro, ajudar em casa e melhorar cada dia.</p>
+  <!-- YEAR-BY-YEAR -->
+  <section class="card">
+    <h2>Plano por ano (resumo rápido)</h2>
+    <div class="grid">
+      <div class="year-list">
+        <div class="year"><strong>11 anos (Início)</strong>
+          <ul>
+            <li>Rotina: 30–45 min estudo diário (leitura + dever).</li>
+            <li>Objetivo: hábito de estudo, alfabetização financeira básica (poupança).</li>
+            <li>Atividade: aprender 1 habilidade manual (ex.: manutenção básica, código iniciante).</li>
+          </ul>
+        </div>
+        <div class="year"><strong>12 anos</strong>
+          <ul>
+            <li>Rotina: 45–60 min diário.</li>
+            <li>Objetivo: consolidar matérias essenciais (português e matemática).</li>
+            <li>Atividade: curso online curto (30 horas) — escolher tema.</li>
+          </ul>
+        </div>
+        <div class="year"><strong>13 anos</strong>
+          <ul>
+            <li>Rotina: 1 hora estudo estruturado + projetos.</li>
+            <li>Objetivo: desenvolver raciocínio lógico e inglês básico.</li>
+            <li>Atividade: projeto prático (mini-negócio, feira, app simples).</li>
+          </ul>
+        </div>
+        <div class="year"><strong>14 anos</strong>
+          <ul>
+            <li>Rotina: 1h a 1h30, revisão semanal.</li>
+            <li>Objetivo: notas estáveis e reforço em pontos fracos.</li>
+            <li>Atividade: curso técnico introdutório / iniciação profissional.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="year-list">
+        <div class="year"><strong>15 anos</strong>
+          <ul>
+            <li>Rotina: 1h30 – 2h, com estudos dirigidos.</li>
+            <li>Objetivo: preparar para Ensino Médio; decidir áreas de interesse.</li>
+            <li>Atividade: estágio leve / ajuda em negócio familiar / freelancing.</li>
+          </ul>
+        </div>
+        <div class="year"><strong>16 anos</strong>
+          <ul>
+            <li>Rotina: 2h por dia; estudo e prática técnica.</li>
+            <li>Objetivo: certificação técnica curta / curso profissional.</li>
+            <li>Atividade: trabalho pontual (bicos), controlar pequenas finanças.</li>
+          </ul>
+        </div>
+        <div class="year"><strong>17 anos</strong>
+          <ul>
+            <li>Rotina: 2–3h; preparação para exame, curso técnico avançado.</li>
+            <li>Objetivo: terminar Ensino Médio com porte de ingresso técnico/faculdade.</li>
+            <li>Atividade: currículo, portfólio, entrevista, primeira carteira ou MEI.</li>
+          </ul>
+        </div>
+        <div class="year"><strong>18 anos</strong>
+          <ul>
+            <li>Chegar com habilidade técnica, alguma renda, e plano para carreira/estudo superior.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WEEKLY SCHEDULE -->
+  <section class="card">
+    <h2>Modelo de horário semanal</h2>
+    <p class="small">Exemplo simples para dias de escola. Ajuste conforme rotina.</p>
+    <pre style="background:#f7f9fb;padding:10px;border-radius:8px;">Segunda a Sexta:
+- 06:30 Acordar, higiene, 15 min leitura
+- 07:30 Escola
+- 16:00 Lanche e descanso 30 min
+- 16:30 Estudo guiado (tarefas) 45-60 min
+- 18:00 Atividade prática (curso, projeto) 45 min
+- 19:00 Jantar / família
+- 20:00 Reviso rápido 20–30 min / leitura leve
+- 21:00 Dormir (hora certa)
+
+Sábado:
+- Projeto prático 1-2h, curso online 1h, lazer
+
+Domingo:
+- Revisão semanal 30–45 min, planejamento da semana</pre>
+  </section>
+
+  <!-- STUDY TECHNIQUES -->
+  <section class="card">
+    <h2>Técnicas de estudo e hábitos</h2>
+    <ul>
+      <li><b>Pomodoro:</b> 25 min foco / 5 min pausa. 4 ciclos = 1 descanso maior.</li>
+      <li><b>Revisão ativa:</b> em vez de ler, explicar em voz alta e resolver exercícios.</li>
+      <li><b>Espaçamento:</b> revisar conteúdo 1 dia, 3 dias, 7 dias, 15 dias.</li>
+      <li><b>Projetos práticos:</b> aprender fazendo — um projeto por trimestre.</li>
+      <li><b>Pequenas metas:</b> 30min por dia é melhor que 4h em um dia só.</li>
+    </ul>
+  </section>
+
+  <!-- INTERACTIVE: HABIT TRACKER & GOALS -->
+  <section class="card" id="interactive">
+    <h2>Acompanhe hábitos e metas</h2>
+    <div style="display:flex;gap:12px;flex-wrap:wrap">
+      <div style="flex:1;min-width:260px">
+        <label>Adicionar meta (curto prazo)</label>
+        <input id="metaText" placeholder="Ex: terminar curso básico de informática" />
+        <div style="margin-top:8px">
+          <button id="addMetaBtn">Adicionar meta</button>
+          <button id="saveAllBtn" style="margin-left:8px;background:#2c6; color:#fff">Salvar progresso</button>
+        </div>
+        <div id="metas" style="margin-top:10px;"></div>
+      </div>
+
+      <div style="flex:1;min-width:260px">
+        <label>Hábitos diários (clique para marcar)</label>
+        <div class="habits" id="habitsList">
+          <div class="habit" data-id="study">Estudar 30m</div>
+          <div class="habit" data-id="reading">Leitura 15m</div>
+          <div class="habit" data-id="english">Inglês 20m</div>
+          <div class="habit" data-id="project">Projeto 1h/sem</div>
+          <div class="habit" data-id="sleep">Dormir cedo</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:12px">
+      <label>Progresso geral</label>
+      <div class="progress-bar" aria-hidden>
+        <i id="progressBarInner" style="width:0%"></i>
+      </div>
+      <div class="muted" id="progressText">0% concluído</div>
+    </div>
+  </section>
+
+  <!-- FINANCIAL -->
+  <section class="card">
+    <h2>Plano financeiro (poupança e metas)</h2>
+    <p class="small">Pequenas ações constroem reserva — objetivo: aprender a guardar e planejar.</p>
+
+    <div class="grid">
+      <div>
+        <label>Quanto consegue poupar por mês (R$)</label>
+        <input id="poupancaMensal" type="number" min="0" value="10" />
+        <label style="margin-top:8px">Meta de economia até 18 anos (R$)</label>
+        <input id="metaEconomia" type="number" min="0" value="1000" />
+        <div style="margin-top:8px">
+          <button id="calcEconomia">Calcular progresso</button>
+        </div>
+      </div>
+      <div>
+        <label>Resumo</label>
+        <div class="card" style="padding:10px;">
+          <div class="muted">Meses até 18 anos: <span id="mesesRestantes"></span></div>
+          <div style="margin-top:8px"><b>Estimativa acumulada:</b> R$ <span id="estimativaAcumulada">0</span></div>
+          <div class="muted" id="economiaMsg"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACTION PLAN / CHECKLIST -->
+  <section class="card">
+    <h2>Checklist: passos práticos (faça à medida que avança)</h2>
+    <ul>
+      <li>✅ Criar rotina de estudo (começar com 20–30 min).</li>
+      <li>✅ Em cada semestre: meta de 1 curso curto (30–60h).</li>
+      <li>✅ Projetos práticos: 1 por trimestre (feira, venda, app, montagem).</li>
+      <li>✅ Aprender finanças básicas: poupança, orçamento simples.</li>
+      <li>✅ Aos 16: buscar estágio, bico ou MEI (orientação dos pais).</li>
+      <li>✅ Aos 17: preparar currículo e portfólio; simular entrevistas.</li>
+    </ul>
+  </section>
+
+  <!-- TOOLS: EXPORT / IMPORT -->
+  <section class="card">
+    <h2>Salvar / Exportar / Imprimir</h2>
+    <div class="flex">
+      <button id="exportBtn">Exportar para JSON</button>
+      <button id="importBtn" class="small-btn">Importar JSON</button>
+      <input type="file" id="importFile" style="display:none" accept=".json" />
+      <button id="printBtn" class="small-btn">Imprimir página</button>
+    </div>
+    <div class="muted" style="margin-top:10px">Os dados ficam no seu navegador. Se quiser usar outro dispositivo, exporte o JSON e importe lá.</div>
+  </section>
+
+  <footer>
+    Deseja que eu gere versão com gráficos, áudio narrado ou transforme isso em app simples? Diga qual e eu adapto.
+  </footer>
 </div>
 
-<div class="card">
-<h2>Juninho — O Menino que se Perdeu</h2>
-<p>Juninho começou a namorar cedo, brigava, se distraía, esquecia deveres e repetiu o ano.</p>
-<p>Aos 18 anos descobriu a realidade: sem estudo, sem curso e sem profissão, não tinha oportunidades.</p>
-</div>
+<script>
+/* --- Simple interactive functionality --- */
+const metasEl = document.getElementById('metas');
+const addMetaBtn = document.getElementById('addMetaBtn');
+const metaText = document.getElementById('metaText');
+const habitsList = document.getElementById('habitsList');
+const progressBarInner = document.getElementById('progressBarInner');
+const progressText = document.getElementById('progressText');
+const saveAllBtn = document.getElementById('saveAllBtn');
 
-<div class="card">
-<h2>A Realidade Financeira</h2>
-<p>Quem estuda até o Ensino Médio ganha R$1.500 a R$2.000.</p>
-<p>Quem faz curso técnico ganha R$2.500 a R$4.000.</p>
-<p>Quem faz faculdade ganha R$4.000 a R$20.000.</p>
-<p>Sem estudar? Muitas vezes R$800 a R$1.200 em trabalhos pesados.</p>
-</div>
+let state = {
+  metas: [],
+  habits: {},
+  poupancaMensal: Number(document.getElementById('poupancaMensal').value),
+  metaEconomia: Number(document.getElementById('metaEconomia').value),
+  startAge: 11,
+  targetAge: 18
+};
 
-<div class="card">
-<h2>Moral da História</h2>
-<p><b>O amor pode esperar. O futuro não.</b></p>
-<p>Quem foca aos 11 tem liberdade aos 18.</p>
-</div>
+// load existing
+function loadState(){
+  try{
+    const raw = localStorage.getItem('planoFuturo_v1');
+    if(raw){ state = JSON.parse(raw); }
+    renderMetas();
+    renderHabits();
+    updateProgress();
+    document.getElementById('poupancaMensal').value = state.poupancaMensal || 0;
+    document.getElementById('metaEconomia').value = state.metaEconomia || 0;
+    updateMesesRestantes();
+  }catch(e){ console.error(e); }
+}
+function saveState(){
+  localStorage.setItem('planoFuturo_v1', JSON.stringify(state));
+  alert('Progresso salvo no navegador.');
+}
 
+/* METAS */
+function renderMetas(){
+  metasEl.innerHTML = '';
+  state.metas.forEach((m, idx) => {
+    const div = document.createElement('div');
+    div.className = 'goal-item';
+    div.innerHTML = '<div style="flex:1"><input type="checkbox" ' + (m.done ? 'checked' : '') + ' data-idx="'+idx+'" class="metaChk" /> <b style="font-size:14px">'+escapeHtml(m.text)+'</b><div class="muted" style="font-size:12px">'+(m.note||'')+'</div></div><div><button class="small-btn" data-del="'+idx+'">x</button></div>';
+    metasEl.appendChild(div);
+  });
+  Array.from(document.getElementsByClassName('metaChk')).forEach(chk => {
+    chk.addEventListener('change', e=>{
+      const idx = e.target.getAttribute('data-idx');
+      state.metas[idx].done = e.target.checked;
+      saveState();
+      updateProgress();
+    });
+  });
+  Array.from(document.querySelectorAll('[data-del]')).forEach(btn=>{
+    btn.addEventListener('click', e=>{
+      const idx = Number(e.target.getAttribute('data-del'));
+      state.metas.splice(idx,1);
+      saveState();
+      renderMetas();
+      updateProgress();
+    });
+  });
+}
+addMetaBtn.addEventListener('click', ()=>{
+  const text = metaText.value.trim();
+  if(!text) return alert('Escreva uma meta.');
+  state.metas.push({text, done:false, note:''});
+  metaText.value='';
+  saveState();
+  renderMetas();
+  updateProgress();
+});
+
+/* HABITS */
+function renderHabits(){
+  Array.from(habitsList.children).forEach(el=>{
+    const id = el.getAttribute('data-id');
+    if(state.habits[id]) el.classList.add('active'); else el.classList.remove('active');
+    el.addEventListener('click', ()=>{
+      state.habits[id] = !state.habits[id];
+      saveState();
+      renderHabits();
+      updateProgress();
+    });
+  });
+}
+
+/* PROGRESS calculation: percent metas+habits */
+function updateProgress(){
+  const metasDone = state.metas.filter(m=>m.done).length;
+  const metasTotal = Math.max(1, state.metas.length);
+  const habitsTotal = Array.from(habitsList.children).length;
+  const habitsDone = Object.values(state.habits).filter(Boolean).length;
+  const percent = Math.round(((metasDone/metasTotal) * 0.6 + (habitsDone/habitsTotal) * 0.4) * 100);
+  progressBarInner.style.width = percent + '%';
+  progressText.textContent = percent + '% concluído';
+}
+
+/* FINANCIAL */
+function updateMesesRestantes(){
+  const nowAge = state.startAge;
+  const months = (state.targetAge - nowAge) * 12;
+  document.getElementById('mesesRestantes').textContent = months;
+  document.getElementById('estimativaAcumulada').textContent = ( (state.poupancaMensal||0) * months ).toFixed(2);
+  const remaining = (state.metaEconomia || 0) - ((state.poupancaMensal||0) * months);
+  document.getElementById('economiaMsg').textContent = remaining <= 0 ? 'Meta atingível com economia atual.' : 'Faltam R$ ' + remaining.toFixed(2) + ' para atingir a meta.';
+}
+document.getElementById('calcEconomia').addEventListener('click', ()=>{
+  state.poupancaMensal = Number(document.getElementById('poupancaMensal').value || 0);
+  state.metaEconomia = Number(document.getElementById('metaEconomia').value || 0);
+  saveState();
+  updateMesesRestantes();
+});
+
+/* EXPORT / IMPORT / PRINT */
+document.getElementById('exportBtn').addEventListener('click', ()=>{
+  const data = JSON.stringify(state, null, 2);
+  const blob = new Blob([data], {type:'application/json'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url; a.download = 'plano_futuro_export.json';
+  a.click();
+  URL.revokeObjectURL(url);
+});
+document.getElementById('importBtn').addEventListener('click', ()=>document.getElementById('importFile').click());
+document.getElementById('importFile').addEventListener('change', (e)=>{
+  const f = e.target.files[0];
+  if(!f) return;
+  const reader = new FileReader();
+  reader.onload = evt=>{
+    try{
+      const obj = JSON.parse(evt.target.result);
+      state = obj;
+      saveState();
+      loadState();
+      alert('Importado com sucesso!');
+    }catch(err){ alert('Arquivo inválido'); }
+  };
+  reader.readAsText(f);
+});
+document.getElementById('printBtn').addEventListener('click', ()=>window.print());
+
+/* UTIL */
+function escapeHtml(s){ return String(s).replace(/[&<>"']/g, c=>({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' })[c]); }
+
+/* Save all button */
+saveAllBtn.addEventListener('click', saveState);
+
+/* init */
+loadState();
+updateMesesRestantes();
+updateProgress();
+
+</script>
 </body>
 </html>
